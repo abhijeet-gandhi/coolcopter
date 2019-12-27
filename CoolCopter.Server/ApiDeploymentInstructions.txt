@@ -1,0 +1,12 @@
+===================================================================
+#Create share folder
+sudo mkdir /share/coolcopter
+#Change owner
+sudo chown tadmin /share/coolcopter
+#Give read/write permission
+sudo chmod g+w /share/coolcopter
+#Copy folder from Windows to Linux
+pscp -pw Windows@12345 -r C:\abhijeet-gandhi\coolcopter\CoolCopter.Server\Output\ tadmin@coolcopterapi.centralindia.cloudapp.azure.com:/share/coolcopter
+#Copy bin in linux from share to prod path
+cp -r /share/coolcopter /etc/coolcopter
+============================================================

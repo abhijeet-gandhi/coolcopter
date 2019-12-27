@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "CoolCopter.Api";
+
+package registration;
+
+service Registration {
+  rpc Register (RegistrationRequest) returns (RegistrationResponse);
+}
+
+message RegistrationRequest {
+	string name = 1;
+	string key = 2;
+    string privateIP = 3;
+}
+
+message RegistrationResponse {
+	string name = 1;
+	string key = 2;
+    string id = 3;
+	int32 internval = 4;
+}

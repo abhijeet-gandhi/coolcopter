@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "CoolCopter.Api";
+
+package registration;
+
+service Edge {
+  rpc Ping (PingRequest) returns (PingResponse);
+}
+
+message PingRequest {
+	string id = 1;
+	string key = 2;
+    string privateIP = 3;
+	string timestamp = 5;
+}
+
+message PingResponse {
+	string id = 2;
+}
